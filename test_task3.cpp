@@ -2,9 +2,9 @@
  * CSC232 - Data Structures
  * Missouri State University
  *
- * @file    test_task2.cpp
+ * @file    test_task3.cpp
  * @author  Jim Daehn <jdaehn@missouristate.edu>
- * @brief   Test suite to validate task 2 of this assignment.
+ * @brief   Test suite to validate task 3 of this assignment.
  * @version v2022.12.26
  * @date    Spring 2023
  */
@@ -12,11 +12,11 @@
 #include "doctest.h"
 #include "csc232.h"
 
-TEST_SUITE("Task 2" * doctest::description("A suite of tests for Task 2"))
+TEST_SUITE("Task 3" * doctest::description("A suite of tests for Task 3"))
 {
     TEST_CASE("Task is ready for evaluation")
     {
-        const char *search_string = "TEST_TASK_2 TRUE";
+        const char *search_string = "TEST_TASK_3 TRUE";
         const char *filename = "csc232.h";
         std::ifstream input_stream{filename, std::ios::in};
         if (!input_stream) {
@@ -33,6 +33,6 @@ TEST_SUITE("Task 2" * doctest::description("A suite of tests for Task 2"))
 
         size_t pos = file_contents.find(search_string);
         REQUIRE_MESSAGE((static_cast<int>(pos) > 0),
-                        "It appears you have not toggled TEST_TASK_2 from FALSE to TRUE. Please do this before attempt to validate this task.");
+                        "It appears you have not toggled TEST_TASK_3 from FALSE to TRUE. Please do this before attempt to validate this task.");
     }
 }
